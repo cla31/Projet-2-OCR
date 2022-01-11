@@ -1,0 +1,1439 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;500;600&display=swap');
+* {
+    font-family: 'Raleway', sans-serif, Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.place-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    height: auto;
+    /* background-color: rgb(157, 157, 212); */
+}
+
+.content-header {
+    width: 100%;
+    height: auto;
+    /* border: green 4px solid; */
+}
+
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* HEADER*/
+
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.div-nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 92%;
+    max-width: 1400px;
+    height: auto;
+    margin: 0 auto;
+    /* background-color: blueviolet; */
+}
+
+.box-img-links {
+    display: flex;
+    justify-content: space-between;
+    /* 100% de son élément parent qui est .div-nav */
+    width: 100%;
+    height: auto;
+    /* border: violet 2px solid; */
+}
+
+.box-links {
+    display: flex;
+    /* les blocs sont alignés à la fin */
+    justify-content: flex-end;
+    align-items: center;
+    /* 30% par rapport à son élément parent (.boxImgLinks)  */
+    width: 30%;
+    /* border: green 2px solid; */
+}
+
+.box-link1 {
+    /* agencement du lien dans son container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 99px;
+    /* pour pas qu'il y ait un décalage avec le lien survolé */
+    border-top: 1px solid transparent;
+    /* border: crimson 2px solid; */
+}
+
+.box-link1:hover {
+    border-top: 2px solid #0065fc;
+    cursor: pointer;
+}
+
+
+/* Quand le parent est survolé alors l'enfant (le lien) aura la couleur bleue */
+
+.box-link1:hover>a {
+    color: #0065fc;
+}
+
+.box-link2 {
+    width: 40%;
+    height: 99px;
+    /* agencement du lien dans son container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* pour pas qu'il y ait un décalage avec le lien survolé */
+    border-top: 1px solid transparent;
+    /* border: crimson 2px solid; */
+}
+
+.box-link2:hover {
+    border-top: 2px solid #0065fc;
+    cursor: pointer;
+}
+
+
+/* Quand le parent est survolé alors l'enfant (le lien) aura la couleur bleue */
+
+.box-link2:hover>a {
+    color: #0065fc;
+}
+
+
+/* stylisation des liens */
+
+.link1 {
+    color: black;
+    text-decoration: none;
+    margin-top: 10px;
+    /* border: crimson 2px solid; */
+}
+
+.link2 {
+    color: black;
+    text-decoration: none;
+    margin-top: 10px;
+    /* border: crimson 2px solid; */
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+/* Media queries --> NAVIGATION */
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+/* Media queries version TABLETTE--> NAVIGATION */
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .box-links {
+        /* 50% par rapport à son élément parent(.box-img-links)*/
+        width: 50%;
+        /* border: green 2px solid; */
+    }
+}
+
+
+/* Media queries version MOBILE --> NAVIGATION */
+
+@media screen and (max-width: 768px) {
+    .div-nav {
+        width: 100%;
+        margin: 0px;
+    }
+    .box-img-links {
+        width: 100%;
+        /* alignement du logo et du bloc avec les liens */
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0%;
+        /* border: violet 2px solid; */
+    }
+    .box-links {
+        /* 100% par rapport à son élément parent (.box-img-links) */
+        width: 100%;
+        /* border: green 2px solid; */
+        justify-content: center;
+    }
+    .box-link1 {
+        /* border: red 2px solid; */
+        /* on grossit l'élément pour qu'il occupe toute la place restante */
+        flex: 1;
+        border-bottom: #F2F2F2 2px solid;
+    }
+    .box-link2 {
+        /* border: red 2px solid; */
+        /* on grossit l'élément pour qu'il occupe toute la place restante */
+        flex: 1;
+        border-bottom: #F2F2F2 2px solid;
+    }
+    /* stylisation des liens pour que la bordure apparaisse en bas */
+    .box-link1:hover {
+        border-top: none;
+        border-bottom: 2px solid #0065fc;
+        cursor: pointer;
+    }
+    .box-link2:hover {
+        border-top: none;
+        border-bottom: 2px solid #0065fc;
+        cursor: pointer;
+    }
+}
+
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* CONTENU*/
+
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.content {
+    width: 92%;
+    height: auto;
+    max-width: 1400px;
+    /* border: black 4px solid; */
+}
+
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* BARRRE DE RECHERCHE*/
+
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.content-search-bar {
+    width: auto;
+    height: auto;
+    padding-bottom: 30px;
+    /* border: black 4px solid; */
+}
+
+
+/* stylisation du gros titre au-dessus de la search bar */
+
+.title-search-bar {
+    font-weight: 600;
+}
+
+.box-icon-input-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* largeur relative à son parent (box-search-bar) */
+    width: 30%;
+    max-width: 420px;
+    border-radius: 10px;
+    border: 0.5px solid#F2F2F2;
+    /* border: 0.5px red solid; */
+}
+
+.icon-style {
+    /* Utilisation de flexbox pour centrer l'icone dans la div .icon-style */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14%;
+    height: 50px;
+    border-radius: 10px 0 0 10px;
+    background-color: #F2F2F2;
+}
+
+.search-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 50px;
+    border: none;
+    /* style font */
+    font-size: 18px;
+    color: black;
+    font-family: 'Raleway', sans-serif, Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    /* border: 0.5px aqua solid; */
+}
+
+.search-input input {
+    width: 100%;
+    margin: 0;
+    padding-left: 8%;
+    border: none;
+    /* style font */
+    font-family: 'Raleway', sans-serif, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+/* On cache l'icone search pour ensuite s'en servir dans le media queries */
+
+.search-button {
+    /* position du bouton dans la div */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    max-width: 120px;
+    height: 50px;
+    font-weight: 600;
+    border-radius: 0 10px 10px 0;
+    color: white;
+    background-color: #0065fc;
+    cursor: pointer;
+}
+
+.title-button {
+    font-size: 16px;
+}
+
+#icon-search {
+    display: none;
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+/* Media queries --> BARRRE DE RECHERCHE */
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+/* Media queries version TABLETTE --> BARRRE DE RECHERCHE*/
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .box-icon-input-button {
+        width: 40%;
+    }
+    .search-input {
+        font-size: 14px;
+    }
+    .title-button {
+        font-size: 14px;
+    }
+}
+
+
+/* Media queries version MOBILE --> BARRRE DE RECHERCHE*/
+
+@media screen and (max-width: 768px) {
+    .box-title-search-bar p {
+        font-size: 15px;
+    }
+    .title-search-bar {
+        font-weight: 600;
+        font-size: 22px;
+    }
+    .box-icon-input-button {
+        width: 88%;
+        max-width: 350px;
+        /* border: brown 2px solid; */
+    }
+    .icon-style {
+        width: 20%;
+        height: 42px;
+    }
+    .search-input {
+        /*le mettre à 100% sinon il met des marges */
+        width: 100%;
+        height: 20px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .search-button {
+        width: 20%;
+        min-width: 40px;
+        height: 42px;
+        border-radius: 10px 10px 10px 10px;
+    }
+    /* disparition du bouton rechercher */
+    .search-button p {
+        display: none;
+    }
+    /* apparition de l'icône rechercher */
+    #icon-search {
+        display: block;
+    }
+}
+
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* FILTRES et section INFO */
+
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.content-filters {
+    width: auto;
+    height: auto;
+    /* border: red 4px solid; */
+}
+
+.filters-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.place-filters {
+    display: flex;
+    justify-content: flex-start;
+    /* background-color: rgb(91, 99, 70); */
+}
+
+.title-full-filters {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 8px;
+    padding-right: 20px;
+    /* border: greenyellow 2px solid; */
+}
+
+.title-full-filters h3 {
+    font-size: min(1.4vw, 15px);
+}
+
+.filter-box {
+    display: flex;
+    max-width: 850px;
+    /* border: pink 10px solid; */
+}
+
+.filter-box1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 332px;
+    /* border: red 2px solid; */
+}
+
+.filter-box2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 420px;
+    /* border: red 2px solid; */
+}
+
+.title-filter {
+    font-size: min(1.4vw, 15px);
+}
+
+.eco {
+    display: flex;
+    align-items: center;
+    max-width: 160px;
+    height: 40px;
+    padding-right: 10px;
+    margin-right: 20px;
+    border-radius: 30px;
+    border: 2px solid #F2F2F2;
+    /* border: 1px solid aqua; */
+}
+
+
+/* ******************************************************************* */
+
+.eco h3:before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f53a';
+    color: #0065fc;
+    border-radius: 25px;
+    background-color: #DEEBFF;
+    font-size: 23px;
+    padding: 10px 10px 10px 10px;
+    margin-right: 12px;
+}
+
+.eco h3:hover:before {
+    color: white;
+    background-color: #0065fc;
+}
+
+.family {
+    display: flex;
+    align-items: center;
+    max-width: 125px;
+    height: 40px;
+    border-radius: 30px;
+    padding-right: 10px;
+    margin-right: 20px;
+    border: 2px solid #F2F2F2;
+    /* border: 1px solid aqua; */
+}
+
+.family h3:before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f1ae';
+    color: #0065fc;
+    border-radius: 25px;
+    background-color: #DEEBFF;
+    font-size: 25px;
+    padding: 10px 11px 10px 11px;
+    margin-right: 12px;
+}
+
+.family h3:hover:before {
+    color: white;
+    background-color: #0065fc;
+}
+
+.romantic {
+    display: flex;
+    align-items: center;
+    max-width: 160px;
+    padding-right: 10px;
+    height: 40px;
+    border-radius: 30px;
+    margin-right: 20px;
+    border: 2px solid #F2F2F2;
+}
+
+.romantic h3:before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f004';
+    color: #0065fc;
+    border-radius: 25px;
+    background-color: #DEEBFF;
+    font-size: 25px;
+    padding: 10px 10px 10px 10px;
+    margin-right: 12px;
+}
+
+.romantic h3:hover:before {
+    color: white;
+    background-color: #0065fc;
+}
+
+.pets {
+    display: flex;
+    align-items: center;
+    max-width: 212px;
+    padding-right: 10px;
+    height: 40px;
+    border-radius: 30px;
+    border: 2px solid #F2F2F2;
+    /* border: 1px solid aqua; */
+}
+
+.pets h3:before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f6d3';
+    color: #0065fc;
+    border-radius: 25px;
+    background-color: #DEEBFF;
+    font-size: 25px;
+    padding: 10px 10px 10px 10px;
+    margin-right: 12px;
+}
+
+.pets h3:hover:before {
+    color: white;
+    background-color: #0065fc;
+}
+
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+
+/* Icone info */
+
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+.info {
+    display: flex;
+    align-items: center;
+    max-width: 850px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    /* border: palevioletred 2px solid; */
+}
+
+
+/* Stylisation de l'icône info */
+
+.icone-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border: 2px solid #F2F2F2;
+    border-radius: 25px;
+    color: #0065fc;
+}
+
+.info p {
+    min-width: 100px;
+    margin-left: 5px;
+    /* border: red 2px solid; */
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+/* Media queries --> FILTRES et section INFO */
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+/* Media queries version TABLETTE --> FILTRES*/
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .filter-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .title-full-filters h3 {
+        font-size: 14px;
+    }
+    .filter-box2 {
+        margin-top: 10px;
+    }
+    .title-filter {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .filter-box {
+        flex-direction: column;
+        align-items: flex-start;
+        /* border: olive 2px solid; */
+    }
+    .title-full-filters h3 {
+        font-size: 14px;
+    }
+    .filter-box1 {
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+    }
+    .filter-box2 {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 10px;
+        margin-top: 0px;
+    }
+    .eco {
+        margin-right: 8px;
+    }
+    .family {
+        margin-right: 0px;
+    }
+    .romantic {
+        margin-bottom: 10px;
+    }
+    .title-filter {
+        font-size: 12px;
+    }
+    /* Partie info */
+    .info {
+        padding-left: 4%;
+    }
+    .info p {
+        max-width: 300px;
+        font-size: 12px;
+    }
+}
+
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* HEBERGEMENTS ET "LES + POPULAIRES" */
+
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.content-renting-rooms {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    /* border: black 4px solid; */
+}
+
+.text-bold {
+    font-weight: 600;
+}
+
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+
+/* Bloc Marseille */
+
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+.marseille-box {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: auto;
+    flex: 1;
+    max-width: 990px;
+    min-width: 660px;
+    height: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 20px;
+    border-radius: 10px;
+    background-color: #F2F2F2;
+    /* border: red 4px solid; */
+}
+
+.marseille-box h3 {
+    height: auto;
+    padding-left: 5px;
+    font-weight: 600;
+}
+
+.row1-marseille {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+}
+
+.row2-marseille {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+}
+
+.cube-room {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 30%;
+    max-width: 287px;
+    height: 100%;
+    padding: 5px;
+    margin: 0 15px 20px 15px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.row1-marseille {
+    padding-bottom: 40px;
+}
+
+.cube-room:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.img-room1 {
+    width: 99.5%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.img-room2 {
+    width: 99.5%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.img-room3 {
+    width: 99.5%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.img-room4 {
+    width: 99.5%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.img-room5 {
+    width: 99.5%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.img-room6 {
+    width: 99.5%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.details-rooms {
+    max-height: 72px;
+    min-height: 50px;
+    margin-left: 4%;
+    /* border: hotpink 2px solid; */
+}
+
+.details-rooms h3 {
+    margin: 5px 0 5px 0;
+    padding: 0;
+    font-size: min(1.41vw, 14px);
+}
+
+.details-rooms p {
+    margin: 0 0 5px 0;
+    padding: 0;
+    font-size: min(1.41vw, 12px);
+}
+
+.stars {
+    font-size: min(1.41vw, 12px);
+}
+
+.star-color-bleu {
+    color: #0065fc;
+}
+
+.star-color-gris {
+    color: #F2F2F2;
+}
+
+.show-more {
+    min-height: 20px;
+    padding-bottom: 40px;
+    margin-top: 40px;
+    font-weight: 600;
+}
+
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+
+/* Bloc les plus populaires */
+
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+.pop-box {
+    width: 40%;
+    height: auto;
+    max-width: 370px;
+    min-width: 220px;
+    height: auto;
+    padding-left: 26px;
+    padding-right: 26px;
+    border-radius: 10px;
+    background-color: #F2F2F2;
+    /* border: brown 1px solid; */
+}
+
+.box-title-pop {
+    width: 99%;
+    height: 11%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-title-pop h3 {
+    font-weight: 600;
+}
+
+.box-title-pop div {
+    margin-top: 14px;
+    font-size: min(1.41vw, 9px);
+}
+
+.box-cubes-pop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: black 1px solid; */
+}
+
+.pop-bloc12 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 330px;
+    min-width: 210px;
+    height: 135px;
+    padding-left: 4px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+.pop-bloc12 h3 {
+    font-weight: 600;
+}
+
+.pop-bloc12:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.pop-bloc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 98%;
+    min-width: 210px;
+    max-width: 330px;
+    padding-left: 4px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: white;
+    /* border: black 1px solid; */
+}
+
+.pop-bloc h3 {
+    font-weight: 600;
+}
+
+.pop-bloc:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.img-pop1 {
+    width: 44%;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 15px 0 0 15px;
+}
+
+.img-pop2 {
+    width: 44%;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 15px 0 0 15px;
+}
+
+.img-pop3 {
+    width: 44%;
+    min-width: 43.5%;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 15px 0 0 15px;
+}
+
+.cube-details-pop {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 150px;
+    min-width: 120px;
+    height: 125px;
+    margin-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    /* border: palevioletred 2px solid; */
+}
+
+.cube-details-pop h3 {
+    margin: 5px 0 5px 0;
+    padding: 0;
+    font-size: min(1.41vw, 14px);
+}
+
+.cube-details-pop p {
+    margin: 0 0 5px 0;
+    padding: 0;
+    font-size: min(1.41vw, 12px);
+}
+
+.star-pop {
+    margin-bottom: 10px;
+    font-size: min(1.41vw, 12px);
+    /* border: tomato 2px solid; */
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+/* Media queries --> BLOCS HEBERGEMENTS ET POPULAIRES */
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+/* Media queries version TABLETTE --> BLOCS HEBERGEMENTS ET POPULAIRES */
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .content-renting-rooms {
+        flex-direction: column;
+        align-items: center;
+    }
+    .pop-box {
+        padding-bottom: 30px;
+        margin-top: 30px;
+    }
+}
+
+
+/* Media queries version MOBILE --> BLOCS HEBERGEMENTS ET POPULAIRES */
+
+@media screen and (max-width: 768px) {
+    .content-renting-rooms {
+        flex-direction: column-reverse;
+        align-items: center;
+        height: auto;
+        padding-left: 0px;
+        background-color: #F2F2F2;
+        /* border: springgreen 2px solid; */
+    }
+    /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+    /* Bloc Marseille (Media queries MOBILE ) */
+    /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+    .marseille-box {
+        flex: none;
+        width: 100%;
+        max-width: 760px;
+        min-width: 250px;
+        height: auto;
+        margin-right: 0;
+        padding-top: 10px;
+        padding-left: 1%;
+        padding-right: 1%;
+        border-radius: 0px;
+        background-color: white;
+        /* background-color: red;*/
+    }
+    .marseille-box h3 {
+        font-size: 18px;
+        padding-left: 30px;
+        /* font-weight: 600; */
+    }
+    .row1-marseille {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0px;
+        /* border: red 2px solid; */
+    }
+    .row2-marseille {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: auto;
+        /* border: red 2px solid; */
+    }
+    .cube-room {
+        max-width: none;
+        min-width: 278px;
+    }
+    .details-rooms h3 {
+        font-size: 14px;
+        padding-left: 0px;
+    }
+    .details-rooms p {
+        font-size: 12px;
+    }
+    .show-more {
+        padding-left: 10px;
+    }
+    .stars {
+        font-size: 12px;
+    }
+    /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+    /* Bloc les plus populaires (Media queries MOBILE )*/
+    /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+    .pop-box {
+        padding-bottom: 30px;
+        min-width: 320px;
+        border-radius: 0px;
+    }
+    .box-title-pop div {
+        font-size: 12px;
+    }
+    .pop-bloc12 {
+        width: 278px;
+    }
+    .pop-bloc {
+        width: 278px;
+    }
+    .cube-details-pop h3 {
+        font-size: 14px;
+    }
+    .cube-details-pop p {
+        font-size: 12px;
+    }
+    .star-pop {
+        font-size: 12px;
+        /* border: tomato 2px solid; */
+    }
+}
+
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* ACTIVITES */
+
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.content-activities {
+    display: flex;
+    justify-content: flex-start;
+    width: auto;
+    height: auto;
+    /* border: black 4px solid; */
+}
+
+.box-activities {
+    max-width: 1420px;
+    min-width: 250px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    /* border: black 2px solid; */
+}
+
+.box-activities h3 {
+    font-weight: 600;
+    min-height: 10px;
+}
+
+.box-cubes-activities {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 600px;
+    /* border: tomato 2px solid; */
+}
+
+.cube-activity {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 23%;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px 1px #F2F2F2;
+}
+
+.cube-activity h3 {
+    font-weight: 600;
+    font-size: min(1vw, 18px);
+}
+
+.cube-activity:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    /* color: #DEEBFF; */
+}
+
+.img-activity1 {
+    width: 100%;
+    height: 530px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.img-activity2 {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.img-activity3 {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.img-activity4 {
+    width: 100%;
+    height: 530px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.img-activity5 {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.img-activity6 {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.title-activity {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 95%;
+    height: 70px;
+    padding-left: 5%;
+}
+
+.box-cubes-activities2356 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 23%;
+    height: 600px;
+    /* border: green 2px solid; */
+}
+
+.cube-activities2356 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px 1px #F2F2F2;
+    /* border: blue 2px solid; */
+}
+
+.cube-activities2356 h3 {
+    font-weight: 600;
+    font-size: min(1vw, 18px);
+}
+
+.cube-activities2356:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    /* color: #DEEBFF; */
+}
+
+.box-activities h3 {
+    padding-left: 0.5%;
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+/* Media queries --> ACTIVITES */
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+/* Media queries version TABLETTE --> BLOC ACTIVITES */
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .box-activities {
+        width: 100%;
+    }
+    .cube-activity h3 {
+        font-size: 14px;
+    }
+    .cube-activities2356 h3 {
+        font-size: 14px;
+    }
+}
+
+
+/* Media queries version MOBILE --> BLOC ACTIVITES */
+
+@media screen and (max-width: 768px) {
+    .content-activities {
+        height: 1700px;
+    }
+    .box-activities {
+        width: 100%;
+    }
+    .box-cubes-activities {
+        flex-direction: column;
+        align-items: center;
+    }
+    .cube-activity {
+        width: 100%;
+        max-width: 315px;
+        margin-bottom: 50px;
+    }
+    .box-cubes-activities2356 {
+        width: 100%;
+        height: auto;
+        align-items: center;
+    }
+    .cube-activities2356 {
+        max-width: 315px;
+        margin-bottom: 50px;
+    }
+    .img-activity1,
+    .img-activity2,
+    .img-activity3,
+    .img-activity4,
+    .img-activity5,
+    .img-activity6 {
+        height: 200px;
+    }
+    .cube-activities2356 h3 {
+        font-size: 14px;
+    }
+    .cube-activity h3 {
+        font-size: 14px;
+    }
+}
+
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* FOOTER*/
+
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.background-footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    background-color: #F2F2F2;
+    /* background-color: salmon; */
+}
+
+.content-footer {
+    /* border: blue 4px solid; */
+    width: 92%;
+    max-width: 1400px;
+}
+
+.place-footer {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.box-footer {
+    /* gestion flex */
+    display: flex;
+    justify-content: space-between;
+    /* réglage taille */
+    width: 100%;
+    height: 300px;
+    max-width: 1440px;
+    min-width: 250px;
+    /* Les marges */
+    padding-top: 40px;
+    padding-left: 1%;
+    /* border: green 2px solid; */
+}
+
+.box-footer h3 {
+    font-weight: 600;
+    font-size: min(1vw, 18px);
+}
+
+.bloc-foot1 {
+    margin-left: 0.5%;
+    height: 150px;
+    /* border: blue 2px solid; */
+}
+
+.bloc-foot2 {
+    height: 150px;
+    /* border: green 2px solid; */
+}
+
+.bloc-foot3 {
+    margin-right: 15%;
+    height: 150px;
+    /* border: red 2px solid; */
+}
+
+.foot-link {
+    height: 30px;
+}
+
+.link {
+    color: black;
+    text-decoration: none;
+    font-size: min(1vw, 12px);
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+/* Media queries --> FOOTER */
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+/* Media queries version TABLETTE --> FOOTER */
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .box-footer h3 {
+        font-size: 14px;
+    }
+    .link {
+        font-size: 12px;
+    }
+}
+
+
+/* Media queries version MOBILE --> FOOTER */
+
+@media screen and (max-width: 768px) {
+    .box-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        /* rajout d'une bordure pour l'ensemble des éléments pour le mode mobile*/
+        padding-left: 20px;
+    }
+    .box-footer h3 {
+        font-size: 14px;
+    }
+    .bloc-foot1 {
+        margin-left: 0;
+    }
+    .link {
+        font-size: 12px;
+    }
+}
