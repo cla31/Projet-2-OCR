@@ -20,3 +20,9 @@ Application overview  (in desktop version):
 ![DESKTOP-VERSION](./booki-desktop.png)
 <br/>
 <br/>
+Application overview (in mobile version):
+<br/>
+<br/>
+Header          |  Body
+:-------------------------:|:-------------------------:
+![MOBILE-VERSION](./booki-mobile1.png) | ![MOBILE-VERSION](./booki-mobile2.png)
