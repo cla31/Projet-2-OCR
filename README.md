@@ -3,7 +3,7 @@
 # Project 2 "Booki" from React JS Application Developer Training<br/>
 Turn a mockup into a website with HTML & CSS.
 
-![LOGO](./images/Booki.png)<br/>
+![LOGO](./Booki.png)<br/>
 ##
 Skills developed:
 - Integrate content according to a model
