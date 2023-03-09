@@ -15,3 +15,8 @@ Nothing to install here, just open the index.html file.
 To view the page online click  :point_right: [here](https://cla31.github.io/Projet-2-OCR/)
 ##
 Application overview  (in desktop version):
+<br/>
+<br/>
+![DESKTOP-VERSION](./booki-desktop.png)
+<br/>
+<br/>
